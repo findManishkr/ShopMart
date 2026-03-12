@@ -1,0 +1,2 @@
+PORT = 3000
+SECRET_KEY "some secret key ex "sjosahohfohaeiojq"
