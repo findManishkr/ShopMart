@@ -2,17 +2,18 @@ const express = require('express');
 
 const app = express();
 
-const {PORT} =    require('./config/server.js');
-const {homeController} = require('./controller/homeController.js');
+const { PORT }  =    require('./config/server.js');
 
 
+const {apiRouter} = require('./routes/apiRouter.js');
+ 
+app.use('/api', apiRouter);
 
 
-app.get('/home', homeController);
  
 
 
 app.listen(PORT, ()=> {
-
+    
     console.log(`server is running at http://localhost:${PORT}`);
 });
